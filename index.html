@@ -27,11 +27,12 @@
 
     <section class="stats"><div><strong>1,200+</strong><span>영양 성분</span></div><div><strong>80+</strong><span>효능 카테고리</span></div><div><strong>매일</strong><span>새로운 정보 업데이트</span></div></section>
 
-    <section class="section" id="catalog"><div class="section-heading"><div><p class="eyebrow">EXPLORE NUTRIENTS</p><h2>필요한 영양 정보를<br>쉽게 찾아보세요.</h2></div><a class="outline" href="#catalog">전체 영양제 보기 <span>→</span></a></div><div class="search"><span>⌕</span><input id="searchInput" placeholder="영양제나 성분을 검색해 보세요 (예: 비타민D, 오메가3)" /><button id="searchBtn">검색</button></div><div class="cards" id="cards"></div></section>
+    <section class="section" id="catalog"><div class="section-heading"><div><p class="eyebrow">EXPLORE NUTRIENTS</p><h2>필요한 영양 정보를<br>쉽게 찾아보세요.</h2></div><a class="outline" href="#catalog" id="allNutrients">전체 영양제 보기 <span>→</span></a></div><div class="search"><span>⌕</span><input id="searchInput" placeholder="영양제나 성분을 검색해 보세요 (예: 비타민D, 오메가3)" /><button id="searchBtn">검색</button></div><div class="cards" id="cards"></div><p class="empty-state" id="emptyState" hidden>검색 결과가 없습니다. 다른 키워드로 검색해 보세요.</p></section>
 
     <section class="checker" id="checker"><div><p class="eyebrow">DAILY CHECK</p><h2>내 영양제,<br>함께 먹어도 괜찮을까요?</h2><p>로그인 후 복용 중인 영양제를 입력하면 주요 성분의 총 섭취량과 상한섭취량을 비교해 드려요.</p><a class="primary" href="#login" id="checkerLogin">복용 점검 시작하기 <span>→</span></a></div><div class="check-visual"><div class="check-card"><span class="check-icon">✓</span><div><strong>안전한 복용 루틴</strong><small>내 기록을 기준으로 확인해요</small></div><b>98%</b></div><div class="check-pills"><span>비타민 D</span><span>오메가3</span><span>마그네슘</span></div></div></section>
 
     <section class="section" id="categories"><div class="section-heading"><div><p class="eyebrow">FIND BY BENEFIT</p><h2>관심 있는 효능부터<br>살펴보세요.</h2></div></div><div class="category-grid"><button>혈행·콜레스테롤 <span>→</span></button><button>모발·탈모 건강 <span>→</span></button><button>피로·에너지 <span>→</span></button><button>면역력 <span>→</span></button><button>피부·항산화 <span>→</span></button><button>수면·스트레스 <span>→</span></button></div></section>
+    <section class="detail-view" id="detailView" hidden></section>
   </main>
   <footer><span>© 2026 VitaCheck</span><span>정보는 참고용이며 질환의 진단·치료를 대신하지 않습니다.</span></footer>
   <script src="app.js"></script>

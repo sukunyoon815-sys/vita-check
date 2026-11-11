@@ -1,0 +1,6 @@
+const nutrients=[{tag:'기초 영양',name:'비타민 D',desc:'뼈의 형성과 유지, 칼슘과 인의 흡수에 필요한 영양소입니다.',meta:'1일 기준치 10㎍'}, {tag:'혈행 건강',name:'오메가-3 (EPA·DHA)',desc:'혈중 중성지질 개선과 혈행 개선에 도움을 줄 수 있습니다.',meta:'EPA+DHA 500~2,000mg'}, {tag:'에너지',name:'마그네슘',desc:'에너지 이용과 신경·근육 기능 유지에 필요한 미네랄입니다.',meta:'1일 기준치 315mg'}, {tag:'항산화',name:'비타민 C',desc:'결합조직 형성과 철의 흡수, 항산화에 필요한 영양소입니다.',meta:'1일 기준치 100mg'}, {tag:'면역 건강',name:'아연',desc:'정상적인 면역기능과 세포분열에 필요한 미네랄입니다.',meta:'1일 기준치 8.5mg'}, {tag:'모발·피부',name:'비오틴',desc:'지방·탄수화물·단백질 대사와 에너지 생성에 필요한 영양소입니다.',meta:'1일 기준치 30㎍'}];
+const cards=document.querySelector('#cards'); const render=(items)=>cards.innerHTML=items.map(x=>`<article class="nutri-card"><span class="tag">${x.tag}</span><h3>${x.name}</h3><p>${x.desc}</p><small>${x.meta}</small></article>`).join(''); render(nutrients);
+document.querySelector('#searchBtn').onclick=()=>{const q=document.querySelector('#searchInput').value.trim(); render(q?nutrients.filter(x=>(x.name+x.tag+x.desc).includes(q)):nutrients)};
+document.querySelector('#searchInput').onkeydown=e=>{if(e.key==='Enter')document.querySelector('#searchBtn').click()};
+document.querySelectorAll('#loginBtn,#checkerLogin').forEach(b=>b.onclick=e=>{e.preventDefault();alert('로그인 기능은 다음 단계에서 연결할 예정입니다. 현재는 비로그인 상태로 정보 탐색을 이용할 수 있어요.')});
+
